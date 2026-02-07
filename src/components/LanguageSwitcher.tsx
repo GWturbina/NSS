@@ -21,7 +21,6 @@ export function LanguageSwitcher() {
 
   const currentLang = languages.find(l => l.code === i18n.language) || languages[0];
 
-  // Placeholder while hydrating to avoid mismatch
   if (!mounted) {
     return (
       <button className="flex items-center gap-2 px-3 py-2 rounded-xl bg-navy-700 border border-navy-600">
