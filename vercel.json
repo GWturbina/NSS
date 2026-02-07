@@ -1,0 +1,11 @@
+{
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["fra1"],
+  "functions": {
+    "app/**/*": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
