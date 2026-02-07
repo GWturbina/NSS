@@ -45,15 +45,3 @@ export default function RootLayout({
     </html>
   );
 }
-```
-
----
-
-**Ошибка была:**
-```
-className=`${inter.className}...
-```
-
-**Исправлено:**
-```
-className={`${inter.className}...
