@@ -4,7 +4,6 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 import { useTelegram, UseTelegramReturn } from '@/lib/telegram';
 
 interface TelegramContextType extends UseTelegramReturn {
-  // Дополнительные поля для игры
   telegramId: number | null;
   username: string | null;
   firstName: string;
@@ -20,13 +19,21 @@ const TelegramContext = createContext<TelegramContextType | null>(null);
 export function TelegramProvider({ children }: { children: ReactNode }) {
   const telegram = useTelegram();
   const [mounted, setMounted] = useState(false);
+  const [savedReferrer, setSavedReferrer] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
     
+    // Читаем сохранённый реферер
+    const saved = localStorage.getItem('nss_referrer');
+    if (saved) {
+      setSavedReferrer(saved);
+    }
+    
     // Если есть реферальный параметр — сохраняем
     if (telegram.startParam) {
       localStorage.setItem('nss_referrer', telegram.startParam);
+      setSavedReferrer(telegram.startParam);
     }
 
     // Сохраняем Telegram ID если есть
@@ -38,7 +45,7 @@ export function TelegramProvider({ children }: { children: ReactNode }) {
     if (telegram.user?.language_code) {
       const lang = telegram.user.language_code;
       if (['en', 'ru', 'uk'].includes(lang)) {
-        localStorage.setItem('i18nextLng', lang);
+        localStorage.setItem('nss_language', lang);
       }
     }
   }, [telegram.startParam, telegram.user]);
@@ -52,8 +59,8 @@ export function TelegramProvider({ children }: { children: ReactNode }) {
   const isPremium = telegram.user?.is_premium || false;
   const languageCode = telegram.user?.language_code || 'en';
   
-  // Реферер из start_param
-  const referrerId = telegram.startParam || localStorage.getItem('nss_referrer');
+  // Реферер из start_param или из сохранённого
+  const referrerId = telegram.startParam || savedReferrer;
 
   const value: TelegramContextType = {
     ...telegram,
@@ -68,7 +75,7 @@ export function TelegramProvider({ children }: { children: ReactNode }) {
   };
 
   if (!mounted) {
-    return null;
+    return <>{children}</>;
   }
 
   return (
@@ -86,7 +93,6 @@ export function useTelegramContext() {
   return context;
 }
 
-// Хук для безопасного использования (не выбрасывает ошибку)
 export function useTelegramSafe(): TelegramContextType | null {
   return useContext(TelegramContext);
 }
