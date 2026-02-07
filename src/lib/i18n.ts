@@ -11,35 +11,37 @@ const resources = {
   ru: { translation: ruTranslation },
 };
 
-// Определяем язык только на клиенте
-const getDefaultLanguage = () => {
-  if (typeof window === 'undefined') return 'en';
-  
-  const saved = localStorage.getItem('nss_language');
-  if (saved) return saved;
-  
-  const browserLang = navigator.language.slice(0, 2);
-  if (['en', 'uk', 'ru'].includes(browserLang)) return browserLang;
-  
-  return 'en';
-};
+const isClient = typeof window !== 'undefined';
 
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: getDefaultLanguage(),
+    lng: 'ru',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
     },
   });
 
+// Меняем язык на клиенте после загрузки
+if (isClient) {
+  const saved = localStorage.getItem('nss_language');
+  if (saved && ['en', 'uk', 'ru'].includes(saved)) {
+    i18n.changeLanguage(saved);
+  } else {
+    const browserLang = navigator.language.slice(0, 2);
+    if (['en', 'uk', 'ru'].includes(browserLang)) {
+      i18n.changeLanguage(browserLang);
+    }
+  }
+}
+
 export default i18n;
 
 export function changeLanguage(code: string) {
   i18n.changeLanguage(code);
-  if (typeof window !== 'undefined') {
+  if (isClient) {
     localStorage.setItem('nss_language', code);
   }
 }
