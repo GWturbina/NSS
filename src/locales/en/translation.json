@@ -1,0 +1,81 @@
+{
+  "app": {
+    "name": "Natural Stones Seekers",
+    "tagline": "Mine stones. Build your future."
+  },
+  "nav": {
+    "mine": "Mine",
+    "safes": "Safes",
+    "shop": "Shop",
+    "exchange": "Exchange",
+    "team": "Team",
+    "expedition": "Expedition"
+  },
+  "common": {
+    "connect_wallet": "Connect",
+    "register_free": "Register FREE",
+    "buy": "Buy",
+    "close": "Close",
+    "loading": "Loading..."
+  },
+  "game": {
+    "your_balance": "Your balance",
+    "per_tap": "per tap",
+    "energy": "Energy",
+    "full_in": "Full in"
+  },
+  "pending": {
+    "will_expire": "will expire!",
+    "time_left": "Time left"
+  },
+  "safes": {
+    "title": "Safes",
+    "total_value": "Total Value",
+    "nst_safe": "NST Safe",
+    "cgt_safe": "CGT Safe",
+    "gwt_safe": "GWT Safe"
+  },
+  "shop": {
+    "title": "Shop",
+    "current_level": "Current Level"
+  },
+  "team": {
+    "title": "Team",
+    "partners": "Partners",
+    "structure": "Structure"
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "unlocks": "Unlocks",
+    "unlock_safes": "Safes",
+    "unlock_partner_10": "10% from invites",
+    "unlock_automation": "Automation",
+    "unlock_academy": "Academy access",
+    "unlock_gem_cutting": "Gem cutting",
+    "unlock_jewelry": "Jewelry",
+    "unlock_square_meters": "Square meters",
+    "unlock_p2p": "P2P trading",
+    "unlock_construction": "Construction",
+    "unlock_own_home": "Your home (35%+65%)",
+    "unlock_village": "Village",
+    "unlock_resort": "Resort",
+    "unlock_millionaire": "Millionaires Club",
+    "unlock_empire": "Empire",
+    "unlock_pension": "Club Pension"
+  },
+  "levels": {
+    "0": { "name": "Registration", "tool": "Safe" },
+    "1": { "name": "Digger", "tool": "Shovel" },
+    "2": { "name": "Sifter", "tool": "Sieve" },
+    "3": { "name": "Hauler", "tool": "Wheelbarrow" },
+    "4": { "name": "Operator", "tool": "Auto-Mine" },
+    "5": { "name": "Cutter", "tool": "Gem Cutting" },
+    "6": { "name": "Jeweler", "tool": "Jewelry" },
+    "7": { "name": "Builder", "tool": "Land Plot" },
+    "8": { "name": "Developer", "tool": "Construction" },
+    "9": { "name": "Landowner", "tool": "Territory" },
+    "10": { "name": "Mayor", "tool": "Village" },
+    "11": { "name": "Governor", "tool": "Resort" },
+    "12": { "name": "Emperor", "tool": "Empire" }
+  }
+}
