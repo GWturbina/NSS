@@ -1,5 +1,3 @@
-'use client';
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -28,7 +26,4 @@ export default i18n;
 
 export function changeLanguage(code: string) {
   i18n.changeLanguage(code);
-  if (typeof window !== 'undefined') {
-    localStorage.setItem('nss_language', code);
-  }
 }
