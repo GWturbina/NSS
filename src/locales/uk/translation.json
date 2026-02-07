@@ -1,0 +1,81 @@
+{
+  "app": {
+    "name": "Natural Stones Seekers",
+    "tagline": "Добувай камені. Будуй майбутнє."
+  },
+  "nav": {
+    "mine": "Шахта",
+    "safes": "Сейфи",
+    "shop": "Магазин",
+    "team": "Команда",
+    "exchange": "Обмін",
+    "expedition": "Експедиція"
+  },
+  "common": {
+    "connect_wallet": "Увійти",
+    "register_free": "Реєстрація БЕЗКОШТОВНО",
+    "buy": "Купити",
+    "close": "Закрити",
+    "loading": "Завантаження..."
+  },
+  "game": {
+    "your_balance": "Твій баланс",
+    "per_tap": "за тап",
+    "energy": "Енергія",
+    "full_in": "Повна через"
+  },
+  "pending": {
+    "will_expire": "зникнуть!",
+    "time_left": "Залишилось"
+  },
+  "safes": {
+    "title": "Сейфи",
+    "total_value": "Загальна вартість",
+    "nst_safe": "Сейф NST",
+    "cgt_safe": "Сейф CGT",
+    "gwt_safe": "Сейф GWT"
+  },
+  "shop": {
+    "title": "Магазин",
+    "current_level": "Поточний рівень"
+  },
+  "team": {
+    "title": "Команда",
+    "partners": "Партнери",
+    "structure": "Структура"
+  },
+  "roadmap": {
+    "title": "Дорожня карта",
+    "unlocks": "Відкривається",
+    "unlock_safes": "Сейфи",
+    "unlock_partner_10": "10% від запрошених",
+    "unlock_automation": "Автоматизація",
+    "unlock_academy": "Доступ до Академії",
+    "unlock_gem_cutting": "Огранка",
+    "unlock_jewelry": "Ювелірка",
+    "unlock_square_meters": "Метри квадратні",
+    "unlock_p2p": "P2P торгівля",
+    "unlock_construction": "Будівництво",
+    "unlock_own_home": "Власний дім (35%+65%)",
+    "unlock_village": "Селище",
+    "unlock_resort": "Курорт",
+    "unlock_millionaire": "Клуб мільйонерів",
+    "unlock_empire": "Імперія",
+    "unlock_pension": "Клубна пенсія"
+  },
+  "levels": {
+    "0": { "name": "Реєстрація", "tool": "Сейф" },
+    "1": { "name": "Копач", "tool": "Лопата" },
+    "2": { "name": "Просіювач", "tool": "Сито" },
+    "3": { "name": "Возій", "tool": "Тачка" },
+    "4": { "name": "Оператор", "tool": "Авто-Шахта" },
+    "5": { "name": "Огранник", "tool": "Огранка" },
+    "6": { "name": "Ювелір", "tool": "Ювелірка" },
+    "7": { "name": "Будівельник", "tool": "Ділянка" },
+    "8": { "name": "Забудовник", "tool": "Будівництво" },
+    "9": { "name": "Землевласник", "tool": "Територія" },
+    "10": { "name": "Мер", "tool": "Селище" },
+    "11": { "name": "Губернатор", "tool": "Курорт" },
+    "12": { "name": "Імператор", "tool": "Імперія" }
+  }
+}
