@@ -5,6 +5,8 @@ import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { TelegramProvider } from '@/components/TelegramProvider';
 
+export const dynamic = 'force-dynamic';
+
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 export const metadata: Metadata = {
