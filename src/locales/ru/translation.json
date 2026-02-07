@@ -1,0 +1,81 @@
+{
+  "app": {
+    "name": "Natural Stones Seekers",
+    "tagline": "Добывай камни. Строй будущее."
+  },
+  "nav": {
+    "mine": "Шахта",
+    "safes": "Сейфы",
+    "shop": "Магазин",
+    "team": "Команда",
+    "exchange": "Обмен",
+    "expedition": "Экспедиция"
+  },
+  "common": {
+    "connect_wallet": "Войти",
+    "register_free": "Регистрация БЕСПЛАТНО",
+    "buy": "Купить",
+    "close": "Закрыть",
+    "loading": "Загрузка..."
+  },
+  "game": {
+    "your_balance": "Твой баланс",
+    "per_tap": "за тап",
+    "energy": "Энергия",
+    "full_in": "Полная через"
+  },
+  "pending": {
+    "will_expire": "исчезнут!",
+    "time_left": "Осталось"
+  },
+  "safes": {
+    "title": "Сейфы",
+    "total_value": "Общая стоимость",
+    "nst_safe": "Сейф NST",
+    "cgt_safe": "Сейф CGT",
+    "gwt_safe": "Сейф GWT"
+  },
+  "shop": {
+    "title": "Магазин",
+    "current_level": "Текущий уровень"
+  },
+  "team": {
+    "title": "Команда",
+    "partners": "Партнёры",
+    "structure": "Структура"
+  },
+  "roadmap": {
+    "title": "Дорожная карта",
+    "unlocks": "Открывается",
+    "unlock_safes": "Сейфы",
+    "unlock_partner_10": "10% от приглашённых",
+    "unlock_automation": "Автоматизация",
+    "unlock_academy": "Доступ в Академию",
+    "unlock_gem_cutting": "Огранка",
+    "unlock_jewelry": "Ювелирка",
+    "unlock_square_meters": "Метры квадратные",
+    "unlock_p2p": "P2P торговля",
+    "unlock_construction": "Строительство",
+    "unlock_own_home": "Свой дом (35%+65%)",
+    "unlock_village": "Посёлок",
+    "unlock_resort": "Курорт",
+    "unlock_millionaire": "Клуб миллионеров",
+    "unlock_empire": "Империя",
+    "unlock_pension": "Клубная пенсия"
+  },
+  "levels": {
+    "0": { "name": "Регистрация", "tool": "Сейф" },
+    "1": { "name": "Копатель", "tool": "Лопата" },
+    "2": { "name": "Просеиватель", "tool": "Сито" },
+    "3": { "name": "Возчик", "tool": "Тачка" },
+    "4": { "name": "Оператор", "tool": "Авто-Шахта" },
+    "5": { "name": "Огранщик", "tool": "Огранка" },
+    "6": { "name": "Ювелир", "tool": "Ювелирка" },
+    "7": { "name": "Строитель", "tool": "Участок" },
+    "8": { "name": "Застройщик", "tool": "Стройка" },
+    "9": { "name": "Землевладелец", "tool": "Территория" },
+    "10": { "name": "Мэр", "tool": "Посёлок" },
+    "11": { "name": "Губернатор", "tool": "Курорт" },
+    "12": { "name": "Император", "tool": "Империя" }
+  }
+}
