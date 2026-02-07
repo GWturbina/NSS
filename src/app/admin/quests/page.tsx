@@ -91,19 +91,23 @@ const DEMO_QUESTS: Quest[] = [
 ];
 
 export default function AdminQuests() {
-  const [quests, setQuests] = useState<Quest[]>([]);
+  const [mounted, setMounted] = useState(false);
+  const [quests, setQuests] = useState<Quest[]>(DEMO_QUESTS);
   const [showEditor, setShowEditor] = useState(false);
   const [editingQuest, setEditingQuest] = useState<Quest | null>(null);
   const [filter, setFilter] = useState<string>('all');
 
   useEffect(() => {
+    setMounted(true);
     const saved = localStorage.getItem('nss_admin_quests');
     if (saved) {
       setQuests(JSON.parse(saved));
-    } else {
-      setQuests(DEMO_QUESTS);
     }
   }, []);
+
+  if (!mounted) {
+    return <div className="p-4 text-white">Загрузка...</div>;
+  }
 
   const saveQuests = (newQuests: Quest[]) => {
     setQuests(newQuests);
