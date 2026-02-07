@@ -1,6 +1,5 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
 import enTranslation from '../locales/en/translation.json';
 import ukTranslation from '../locales/uk/translation.json';
@@ -12,19 +11,27 @@ const resources = {
   ru: { translation: ruTranslation },
 };
 
+// Определяем язык только на клиенте
+const getDefaultLanguage = () => {
+  if (typeof window === 'undefined') return 'en';
+  
+  const saved = localStorage.getItem('nss_language');
+  if (saved) return saved;
+  
+  const browserLang = navigator.language.slice(0, 2);
+  if (['en', 'uk', 'ru'].includes(browserLang)) return browserLang;
+  
+  return 'en';
+};
+
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
+    lng: getDefaultLanguage(),
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
-    },
-    detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
-      lookupLocalStorage: 'nss_language',
     },
   });
 
