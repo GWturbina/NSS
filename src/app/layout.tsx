@@ -30,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Telegram WebApp SDK */}
         <Script 
           src="https://telegram.org/js/telegram-web-app.js" 
           strategy="beforeInteractive"
@@ -46,3 +45,15 @@ export default function RootLayout({
     </html>
   );
 }
+```
+
+---
+
+**Ошибка была:**
+```
+className=`${inter.className}...
+```
+
+**Исправлено:**
+```
+className={`${inter.className}...
