@@ -31,7 +31,7 @@ interface User {
 const DEMO_USERS: User[] = [
   { address: '0x1234567890abcdef1234567890abcdef12345678', level: 5, nstBalance: 12500, cgtBalance: 45, gwtBalance: 23, totalTaps: 45000, referrals: 12, earned: 0.45, registeredAt: '2024-01-01', lastActive: '2024-01-15 14:32', blocked: false },
   { address: '0xabcdef1234567890abcdef1234567890abcdef12', level: 3, nstBalance: 5600, cgtBalance: 20, gwtBalance: 10, totalTaps: 18000, referrals: 5, earned: 0.12, registeredAt: '2024-01-05', lastActive: '2024-01-15 12:15', blocked: false },
-  { address: '0x9876543210fedcba9876543210fedcba98765432', level: 8, nstBalance: 89000, cgtBalance: 350, gwtBonus: 180, gwtBalance: 180, totalTaps: 156000, referrals: 45, earned: 2.34, registeredAt: '2023-12-15', lastActive: '2024-01-15 16:45', blocked: false },
+  { address: '0x9876543210fedcba9876543210fedcba98765432', level: 8, nstBalance: 89000, cgtBalance: 350, gwtBalance: 180, totalTaps: 156000, referrals: 45, earned: 2.34, registeredAt: '2023-12-15', lastActive: '2024-01-15 16:45', blocked: false },
   { address: '0xfedcba9876543210fedcba9876543210fedcba98', level: 1, nstBalance: 250, cgtBalance: 5, gwtBalance: 5, totalTaps: 1200, referrals: 0, earned: 0, registeredAt: '2024-01-14', lastActive: '2024-01-14 18:00', blocked: true },
 ];
 
